@@ -952,23 +952,95 @@
             position: relative;
         }
 
-        .closing-quote {
+        .closing-quote-letter {
             font-family: var(--f-serif);
-            font-size: clamp(1.4rem, 5vw, 2.4rem);
-            font-style: italic;
-            color: var(--accent-pink);
-            max-width: 600px;
-            line-height: 1.4;
-            margin-bottom: 80px;
-            transition: opacity 2s ease, transform 2s ease;
+            color: var(--ivory);
+            max-width: 650px;
+            width: 100%;
+            margin: 0 auto 40px auto;
+            text-align: center;
             opacity: 0;
-            transform: translateY(20px);
-            text-shadow: 0 0 20px var(--glow-pink);
+            transform: translateY(30px);
+            transition: opacity 2.5s cubic-bezier(0.16, 1, 0.3, 1), transform 2.5s cubic-bezier(0.16, 1, 0.3, 1);
+            line-height: 1.8;
+            padding: 0 20px;
         }
 
-        .closing-quote.is-visible {
+        .closing-quote-letter.is-visible {
             opacity: 1;
             transform: translateY(0);
+        }
+
+        .letter-salutation {
+            font-family: var(--f-serif);
+            font-size: clamp(1.8rem, 6vw, 2.4rem);
+            font-style: italic;
+            color: var(--accent-pink);
+            margin-bottom: 2rem;
+            text-shadow: 0 0 15px var(--glow-pink);
+            font-weight: 300;
+        }
+
+        .letter-paragraph {
+            font-family: var(--f-serif);
+            font-size: clamp(1.1rem, 4vw, 1.25rem);
+            font-weight: 300;
+            color: var(--ivory);
+            margin-bottom: 1.6rem;
+            line-height: 1.8;
+            opacity: 0.95;
+        }
+
+        .letter-line-highlight {
+            font-family: var(--f-serif);
+            font-size: clamp(1.2rem, 4.5vw, 1.45rem);
+            font-style: italic;
+            color: var(--accent-pink-light);
+            margin: 2rem 0;
+            text-shadow: 0 0 10px var(--glow-pink);
+            font-weight: 400;
+        }
+
+        .letter-stanza-short {
+            margin: 1.5rem 0;
+            font-family: var(--f-serif);
+            font-size: clamp(1.1rem, 4vw, 1.25rem);
+            font-weight: 300;
+            color: var(--ivory-muted);
+            line-height: 1.7;
+        }
+
+        .letter-poetry-block {
+            font-family: var(--f-serif);
+            font-size: clamp(1.1rem, 4vw, 1.3rem);
+            font-style: italic;
+            color: var(--accent-pink);
+            line-height: 1.8;
+            margin: 2.2rem auto;
+            border-left: 1px solid rgba(255, 191, 216, 0.25);
+            border-right: 1px solid rgba(255, 191, 216, 0.25);
+            padding: 0 20px;
+            max-width: 440px;
+        }
+
+        .letter-valediction {
+            font-family: var(--f-sans);
+            font-size: 10px;
+            letter-spacing: 0.3em;
+            text-transform: uppercase;
+            color: var(--accent-pink-light);
+            margin-top: 4rem;
+            margin-bottom: 0.5rem;
+            opacity: 0.8;
+        }
+
+        .letter-signer {
+            font-family: var(--f-serif);
+            font-size: clamp(1.6rem, 5.5vw, 2.1rem);
+            color: var(--ivory);
+            font-weight: 300;
+            letter-spacing: 0.05em;
+            text-shadow: 0 0 12px var(--glow-pink);
         }
 
         .branding-wrap {
@@ -1503,17 +1575,61 @@
             </section>
 
             <!-- Section 04: Final Closing -->
-            <section class="closing-section">
-                <p id="closingQuote" class="closing-quote">
-                    “A beautiful life deserves beautiful memories. May turning 23 bring you endless light, grace, and joy. Every chapter of your journey is a masterpiece preserved in time.”
-                </p>
-                
-                <div class="birthday-signature-block" style="margin-top: -30px; margin-bottom: 40px; text-align: center; z-index: 10;">
-                    <span style="font-family: var(--f-sans); font-size: 10px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--accent-pink-light); display: block; margin-bottom: 15px; opacity: 0.8;">GIFTED BY</span>
-                    <span style="font-family: var(--f-serif); font-size: 28px; letter-spacing: 0.1em; color: var(--ivory); font-weight: 300; filter: drop-shadow(0 0 10px var(--glow-pink));">Panashe Chinobva</span>
+            <section class="closing-section" style="min-height: auto; padding: 120px 20px 80px 20px;">
+                <div id="closingQuote" class="closing-quote-letter">
+                    <h4 class="letter-salutation">Dear Isheanopa,</h4>
+                    
+                    <p class="letter-paragraph">Today you turn twenty-three, and that is something beautiful.</p>
+                    
+                    <p class="letter-paragraph">Not because of the number itself, but because of everything it represents. The lessons you've carried, the challenges you've overcome, the smiles you've shared, and the strength you've shown even when life asked more from you than seemed fair.</p>
+                    
+                    <p class="letter-line-highlight">Never forget that you are stronger than you know.</p>
+                    
+                    <p class="letter-paragraph">There will be moments when the road ahead feels uncertain, but remember that every great story is written one step at a time. Keep believing in yourself. Keep growing. Keep dreaming. Keep becoming.</p>
+                    
+                    <div class="letter-stanza-short">
+                        <p>Your kindness matters.</p>
+                        <p>Your presence matters.</p>
+                        <p>Your life matters.</p>
+                    </div>
+                    
+                    <p class="letter-paragraph" style="margin-top: 2rem;">And though there are people we wish could still stand beside us physically, love has a way of refusing to disappear.</p>
+                    
+                    <div class="letter-poetry-block">
+                        <p>The love your mother gave you did not end.</p>
+                        <p>It lives in your heart,</p>
+                        <p>in your strength,</p>
+                        <p>in your character,</p>
+                        <p>and in the woman you continue to become.</p>
+                    </div>
+                    
+                    <div class="letter-stanza-short" style="color: var(--accent-pink-light); margin-bottom: 2.5rem;">
+                        <p>Every achievement,</p>
+                        <p>every smile,</p>
+                        <p>every victory,</p>
+                        <p>carries a piece of her love forward.</p>
+                    </div>
+                    
+                    <p class="letter-paragraph" style="font-weight: 400; color: var(--accent-pink);">So walk confidently into this new year of life.</p>
+                    
+                    <div class="letter-stanza-short" style="font-style: italic; color: var(--ivory); font-size: clamp(1.15rem, 4.5vw, 1.35rem); line-height: 1.8;">
+                        <p>Be bold.</p>
+                        <p>Be fearless.</p>
+                        <p>Be joyful.</p>
+                        <p>Be proud of who you are becoming.</p>
+                    </div>
+                    
+                    <p class="letter-line-highlight" style="font-size: clamp(1.3rem, 5vw, 1.65rem); margin: 2.5rem 0;">The future is waiting for your light.</p>
+                    
+                    <p class="letter-paragraph" style="font-size: clamp(1.2rem, 4.5vw, 1.45rem); font-weight: 500; color: var(--accent-pink); letter-spacing: 0.02em;">Happy 23rd Birthday, Isheanopa.</p>
+                    
+                    <p class="letter-paragraph" style="font-style: italic; opacity: 0.95;">May this year bring you peace, purpose, growth, and beautiful memories.</p>
+                    
+                    <div class="letter-valediction">With love,</div>
+                    <div class="letter-signer">Panashe Chinobva</div>
                 </div>
 
-                <div class="branding-wrap">
+                <div class="branding-wrap" style="margin-top: 80px;">
                     <h3 class="branding-title">WARSTREET BIRTHDAY MEMORY™</h3>
                     <p class="branding-sub">Preserved through memory, sound, and luxury movement.</p>
                 </div>
